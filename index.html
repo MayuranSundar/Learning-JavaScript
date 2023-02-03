@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        
+
+        <canvas id="myCanvas" width=500px height=300px style="border:1px solid #000000;"></canvas>
+        <script>
+
+            const canvas = document.getElementById('myCanvas');
+            const context = canvas.getContext('2d');
+            const colors = new Array("blue", "green", "black", "pink", "red", "yellow");
+            const blobs = new Array();
+
+            // let x = 50;
+            // let y = 50;
+
+            // let xChange = 1;
+            // let yChange = 1;
+
+            class Blob{
+              constructor(color, size){
+                this.color = color;
+                this.size = size;
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.xChange = Math.random();
+                this.yChange = Math.random();
+              }
+
+              move(){
+                if(this.x >= canvas.width-this.size || this.x <= this.size){
+                  this.xChange *= -1;
+                }
+                if(this.y >= canvas.height - this.size || this.y <= this.size){
+                  this.yChange *= -1;
+                }
+                this.x += this.xChange;
+                this.y += this.yChange; 
+              }
+
+              draw(){
+                context.beginPath();
+                context.arc(this.x, this.y, this.size, 0,2*Math.PI);
+                context.fillStyle = this.color;
+                context.fill();
+                context.stroke();
+              }
+            }
+            
+            for(let i = 0; i<5; i++){
+              let randCol = colours[Math.floor(Math.random()* colors.length)]
+              blobs.push(new Blob(randCol, 20))
+            }
+            // const blob1 = new Blob("green", 20);
+
+            blobs.forEach(obj){
+              obj.move()
+              obj.draw()
+            }
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
