@@ -15,12 +15,6 @@
             const colors = new Array("blue", "green", "black", "pink", "red", "yellow");
             const blobs = new Array();
 
-            // let x = 50;
-            // let y = 50;
-
-            // let xChange = 1;
-            // let yChange = 1;
-
             class Blob{
               constructor(color, size){
                 this.color = color;
@@ -51,16 +45,21 @@
               }
             }
             
-            for(let i = 0; i<5; i++){
-              let randCol = colours[Math.floor(Math.random()* colors.length)]
-              blobs.push(new Blob(randCol, 20))
+            for(let i=0; i<5; i++){
+              let randCol = colors[Math.floor(Math.random()* colors.length)]
+              let randSize = Math.floor(Math.random() * 30)
+              blobs.push(new Blob(randCol, randSize))
             }
             // const blob1 = new Blob("green", 20);
-
-            blobs.forEach(obj){
-              obj.move()
-              obj.draw()
+            function drawBlobs(){
+              context.clearRect(0, 0, canvas.width, canvas.height)
+              blobs.forEach(function(obj){
+                obj.draw();
+                obj.move();
+              })
             }
+
+            setInterval(drawBlobs, 10)
             
         </script>
     </head>
