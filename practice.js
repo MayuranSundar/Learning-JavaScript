@@ -4,7 +4,6 @@ function fourtyTwo(){
 }
 fourtyTwo();
 
-
 // Practice 2
 let lap1 = 34;
 let lap2 = 33;
@@ -59,3 +58,29 @@ add3Points();
 remove1Point();
 remove1Point();
 console.log(points);
+
+// Practice 8 - Arrays
+let nums = [7,5]
+nums.push(3)
+console.log(nums)
+nums.pop()
+console.log(nums)
+
+// Practice 9 Loops
+for(let i = 0; i<nums.length; i++){
+    console.log(nums[i]);
+}
+
+// Practice 9 Objects
+let course = {
+    name: "JS for Noobs",
+    lessons: 16,
+    creator: "John Doe",
+    length: 60,
+    level: 2,
+    isFree : true,
+    tags : ["html", "css", "js"]
+
+}
+
+console.log(course.name, course.tags, course.creator)

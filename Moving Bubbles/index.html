@@ -45,12 +45,11 @@
               }
             }
             
-            for(let i=0; i<5; i++){
+            for(let i=0; i<10; i++){
               let randCol = colors[Math.floor(Math.random()* colors.length)]
               let randSize = Math.floor(Math.random() * 30)
               blobs.push(new Blob(randCol, randSize))
             }
-            // const blob1 = new Blob("green", 20);
             function drawBlobs(){
               context.clearRect(0, 0, canvas.width, canvas.height)
               blobs.forEach(function(obj){
