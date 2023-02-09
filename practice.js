@@ -84,3 +84,21 @@ let course = {
 }
 
 console.log(course.name, course.tags, course.creator)
+
+// Practice 10 JSON Stringify
+let li = `[1,2,3]`
+li = JSON.parse(li)
+console.log(li, typeof li)
+li.push(4)
+li = JSON.stringify(li)
+console.log(li, typeof li)
+
+// Practice 11 Array, functions and loops
+let arr = ["one", "two", "three"]
+
+function arrayPrinter(arr){
+    for (let index = 0; index < arr.length; index++) {
+        console.log(arr[index])  
+    }
+}
+arrayPrinter(arr)
