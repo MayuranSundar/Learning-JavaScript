@@ -53,11 +53,21 @@ body {
 .num-button{
   color: #ffffff73;
 }
-.button:hover{
+.num-button:hover{
+  color: white;
+}
+.calc-action-btn:hover{
   color: #3498db;
-
 }
 
+.ac:hover{
+  color: #db4a34;
+}
+
+
+.del:hover{
+  color: #db4a34;
+}
 
 /*  UTILITIES*/
 .container .buttons .zero {
@@ -75,7 +85,7 @@ body {
   font-weight: bold;
 }
 .calc-action-btn{
-  color: #ed11d7;
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
 }
