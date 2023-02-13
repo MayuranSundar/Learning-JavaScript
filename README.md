@@ -1,8 +1,11 @@
 # JavaScript Projects
 ### This is a repo for all my projects and mini projects that I make during my JavaScript learning. *[Newest - Oldest]*
+
+7. This is a Rock Paper Scissors project that lets the user pick one option which is pitted against the computer's random choice. The current result as well as track of total wins is displayed.
+  ![](https://github.com/MayuranSundar/Learning-JavaScript/blob/main/Git%20Resources/RockPaperScissors.png)
+
 6. This project is a calculator with basic arithmatic functionalities. It takes user inputs and stores it as string. Then using the JavaScript's eval() function, I evaluate the result of the eqaution and output the result. I also added a delete buttton (Del) to remove the last input of the user.
   ![](https://github.com/MayuranSundar/Learning-JavaScript/blob/main/Git%20Resources/Calculator.png)
-
 ___
 5. This mini project was a Chrome Extension that serves similar to a bookmark feature. Links of the current tab can be saved into a list while also having the ability to save any other links using the input box. These are stored in local storage so it stays there even after tab refresh. 
   ![](https://github.com/MayuranSundar/Learning-JavaScript/blob/main/Git%20Resources/Link%20Tracker.png)
